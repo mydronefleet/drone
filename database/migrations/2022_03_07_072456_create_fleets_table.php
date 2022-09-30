@@ -27,6 +27,7 @@ class CreateFleetsTable extends Migration
             $table->string('pic');
             $table->string('short_desc');
             $table->string('long_desc');
+            $table->string('equipment');
             $table->timestamps();
         });
     }
