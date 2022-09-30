@@ -23,6 +23,7 @@ class CreateMissionsTable extends Migration
             $table->string('mission_location');
             $table->string('pilot');
             $table->longText('description');
+			$table->integer('status');
             $table->timestamps();
         });
     }
