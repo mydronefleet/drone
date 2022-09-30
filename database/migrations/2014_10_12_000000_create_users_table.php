@@ -26,8 +26,7 @@ class CreateUsersTable extends Migration
 			$table->string('country')->nullable();
 			$table->string('pic')->nullable();
 			$table->text('long_desc')->nullable();
-			$table->string('address_line')->nullable();
-            $table->rememberToken();
+			$table->rememberToken();
             $table->timestamps();
 			$table->datetime('deleted_at')->nullable();
         });
