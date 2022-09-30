@@ -53,7 +53,7 @@ class HomeController extends Controller
         $dateS = Carbon::now()->addMonth(3)->format('Y-m-d');
         $dateE = Carbon::now()->format('Y-m-d'); 
         
-        $rpicss = DB::select("select * from rpicss where date_of_certified between '$dateE' and '$dateS'");
+        $rpicss = DB::select("select * from rpicss where date_of_ceretified between '$dateE' and '$dateS'");
         $rpics = json_decode(json_encode($rpicss), true);
         $leaders = GroupLeaders::orderBy('id','DESC')->get();
 
