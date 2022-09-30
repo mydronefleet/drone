@@ -43,7 +43,9 @@ class HomeController extends Controller
         $rpicusers = User::role('Rpic')->count();
 
         $org = Organization::orderBy('id','DESC')->select('pic')->get()->toArray();
-        session(['orgpic' => $org[0]['pic']]);
+		if($org[0]['pic'] != ""){
+			session(['orgpic' => $org[0]['pic']]);
+		}
         $sopcount = Sop::orderBy('id','DESC')->count();
         $fleetcount = Fleet::orderBy('id','DESC')->count();
         $rpicCount = Rpic::orderBy('id','DESC')->count();
