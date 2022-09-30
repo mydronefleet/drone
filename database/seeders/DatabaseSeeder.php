@@ -24,19 +24,26 @@ class DatabaseSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 		
+		
 		DB::table('roles')->insert(
 			[
 				'name' => "Admin",
 				'guard_name' => 'web',
 				'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
-			],
+			]
+		);
+		DB::table('roles')->insert(
+			
 			[
 				'name' => "User",
 				'guard_name' => 'web',
 				'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
-			],
+			]
+		);
+		DB::table('roles')->insert(
+			
 			[
 				'name' => "Rpic",
 				'guard_name' => 'web',
