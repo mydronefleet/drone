@@ -43,10 +43,27 @@ class DatabaseSeeder extends Seeder
 			]
 		);
 		DB::table('roles')->insert(
-			
 			[
 				'name' => "Rpic",
 				'guard_name' => 'web',
+				'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+			]
+		);
+		
+		
+		DB::table('organizations')->insert(
+			[
+				'org_name' => "My Drone",
+				'address_line1' => 'address_line1',
+				'address_line2' => 'address_line2',
+				'city' => 'city',
+				'state' => 'state',
+				'country' => 'country',
+				'zip_code' => 'zip_code',
+				'pic' => 'pic',
+				'short_desc' => 'short_desc',
+				'long_desc' => 'long_desc',
 				'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
 			]
