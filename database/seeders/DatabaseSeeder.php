@@ -20,20 +20,28 @@ class DatabaseSeeder extends Seeder
             'name' => "Admin",
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin@123'),
+			'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
         ]);
 		
 		DB::table('roles')->insert(
 			[
 				'name' => "Admin",
-				'guard_name' => 'web'
+				'guard_name' => 'web',
+				'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
 			],
 			[
 				'name' => "User",
-				'guard_name' => 'web'
+				'guard_name' => 'web',
+				'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
 			],
 			[
 				'name' => "Rpic",
-				'guard_name' => 'web'
+				'guard_name' => 'web',
+				'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
 			]
 		);
     }
