@@ -102,6 +102,8 @@ class MissionController extends Controller
             'mission_date'         => $mission_date,
             'mission_types'        => $request->input('mission_type'),
             'mission_location'     => $request->input('location2'),
+            'latitude'     		   => $request->input('lat'),
+            'longitude'     	   => $request->input('long'),
             'pilot'                => $request->input('pilot'),
             'description'          => $request->input('description')
         ]);
@@ -209,7 +211,7 @@ class MissionController extends Controller
         $mission->requestor_email           = $request->input('requestor_email');
         $mission->mission_date              = $mission_date;
         $mission->mission_types             = $request->input('mission_type');
-        $mission->mission_location          = $request->input('mission_location');
+        $mission->mission_location          = $request->input('location');
         $mission->pilot                     = $request->input('pilot');
         $mission->description               = $request->input('description');
         

@@ -55,13 +55,13 @@
                                         <input type="hidden" class="ul-form-input" name="org_id" value="1"/>
                                        
                                         <div class="col-span-12">
-                                        <label for="" class="">Name</label>
-                                        <input type="text" class="ul-form-input requiredField" name="name" placeholder="Name"/>
+											<label for="" class="">Name</label>
+											<input type="text" class="ul-form-input requiredField" name="name" placeholder="Name"/>
                                         </div>
 
                                         <div class="col-span-12 lg:col-span-6 md:col-span-6">
-                                        <label for="" class="">Requestor Name</label>
-                                        <input type="text" class="ul-form-input requiredField" name="rname" placeholder="Requestor Name"/>
+											<label for="" class="">Requestor Name</label>
+											<input type="text" class="ul-form-input requiredField" name="rname" placeholder="Requestor Name"/>
                                         </div>
 
                                         <div class="col-span-12 lg:col-span-6 md:col-span-6">
@@ -107,9 +107,9 @@
                                         <div class="col-span-12 md:col-span-6">
                                             <label for="" class="">Mission Location</label><br>
                                             <input name="location" class="ul-form-input border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white requiredField pac-target-input bg-white" placeholder="Type your location...">
-											<button class="search-btn px-4 p-2 rounded-r-lg bg-primary-500 text-white font-bold uppercase border-primary-500 border-t border-b border-r focus:outline-none">Search</button>
 											<input type="text" id="pac-input" name="location2" class="ul-form-input" style="opacity:0;"/>
-											
+											<!--<button class="search-btn px-4 p-2 rounded-r-lg bg-primary-500 text-white font-bold uppercase border-primary-500 border-t border-b border-r focus:outline-none">Search</button>
+											<input id="delete-markers" class="btn btn-info" type="button" value="Reset Location" />-->
 											<div id="map" style="height:300px;margin-top: 30px;"></div>
                                         </div>
 
@@ -118,13 +118,42 @@
                                             <select id="pilot" name="pilot" class="ul-form-input requiredField">
                                                 <option value="">Please Select one</option>
                                                 @foreach ($rpics as $key => $rpic)
-
-                                                <option value="{{ $rpic->id }}">{{ $rpic->name }}</option>
-
-                                                @endforeach
-                                                
+												<option value="{{ $rpic->id }}">{{ $rpic->name }}</option>
+												@endforeach
                                             </select>
-                                        
+											<br/>
+											<br/>
+										
+											<!--<label for="" class="">Origin</label>
+                                            <input type="text" class="ul-form-input" id="start" name="start" placeholder="Enter address"/>
+											
+											<br/>
+											<br/>
+											<label for="" class="">Way Points</label>
+                                            <select id="waypoints" multiple>
+												<option value="Buggawala">Buggawala</option>
+												<option value="Bhagwanpur">Bhagwanpur</option>
+												<option value="Khedi Sikhohpur">Khedi Sikhohpur</option>
+											</select>
+											<br/>
+											<br/>
+											<input type="hidden" id="waypoints">
+											<label for="" class="">Destination</label>
+                                            <input type="text" class="ul-form-input" id="end" name="end" placeholder="Enter address"/>
+											<br/><br/>
+											<span class="btn btn-primary" id="submit">Find Route</span>
+											<span id="directions-panel"></span>
+											<br/>
+											<br/>-->
+										
+											<label for="" class="">Latitude</label>
+                                            <input type="text" class="ul-form-input requiredField" id="lat" name="lat" placeholder="Latitude"/>
+											
+											<br/>
+											<br/>
+										
+											<label for="" class="">Longitude</label>
+                                            <input type="text" class="ul-form-input requiredField" id="long" name="long" placeholder="Longitude"/>
                                         </div>
 
                                         <div class="col-span-12">

@@ -1,11 +1,13 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        $user = DB::table('users')->insert([
             'name' => "Admin",
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin@123'),
@@ -24,32 +26,6 @@ class DatabaseSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 		
-		
-		DB::table('roles')->insert(
-			[
-				'name' => "Admin",
-				'guard_name' => 'web',
-				'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-			]
-		);
-		DB::table('roles')->insert(
-			
-			[
-				'name' => "User",
-				'guard_name' => 'web',
-				'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-			]
-		);
-		DB::table('roles')->insert(
-			[
-				'name' => "Rpic",
-				'guard_name' => 'web',
-				'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-			]
-		);
 		
 		
 		DB::table('organizations')->insert(
@@ -68,5 +44,11 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s')
 			]
 		);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(RoleHasPermissionsTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
+		
+		
     }
 }

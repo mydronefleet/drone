@@ -19,6 +19,8 @@ class Mission extends Model
         'mission_date',
         'mission_types',
         'mission_location',
+        'latitude',
+        'longitude',
         'pilot',
         'description'
     ];

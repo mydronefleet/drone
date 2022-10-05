@@ -124,6 +124,14 @@
                                                 <option value="{{$rpic->id}}" <?php if($mission->pilot == $rpic->id){ echo "selected"; } ?>>{{ $rpic->name }}</option>
                                             @endforeach
                                         </select>
+										<br/>
+										<br/>
+										<label for="" class="">Latitude</label>
+                                        {!! Form::text('latitude', null, array('placeholder' => 'Latitude','class' => 'ul-form-input requiredField')) !!}
+										<br/>
+										<br/>
+										<label for="" class="">Longitude</label>
+                                        {!! Form::text('longitude', null, array('placeholder' => 'Longitude','class' => 'ul-form-input requiredField')) !!}
                                     </div>
 
                                     <div class="col-span-12">
