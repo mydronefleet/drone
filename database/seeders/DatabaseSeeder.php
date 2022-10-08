@@ -44,10 +44,7 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s')
 			]
 		);
-        $this->call(PermissionsTableSeeder::class);
-        $this->call(RolesTableSeeder::class);
-        $this->call(RoleHasPermissionsTableSeeder::class);
-        $this->call(ModelHasRolesTableSeeder::class);
+        
 		
 		
     }
