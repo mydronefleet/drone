@@ -19,9 +19,12 @@ class CreateRpicssTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('tail_number');
-            $table->string('date_of_ceretified');
+            $table->date('date_of_ceretified');
+            $table->date('certificate_exp');
             $table->string('mission_type');
+            $table->string('callsign');
             $table->string('pic');
+            $table->string('certificate');
             $table->string('short_desc');
             $table->string('long_desc');
             $table->timestamps();

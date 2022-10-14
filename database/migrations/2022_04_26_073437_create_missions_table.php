@@ -21,6 +21,8 @@ class CreateMissionsTable extends Migration
             $table->date('mission_date');
             $table->string('mission_types');
             $table->string('mission_location');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->string('pilot');
             $table->longText('description');
 			$table->integer('status');
