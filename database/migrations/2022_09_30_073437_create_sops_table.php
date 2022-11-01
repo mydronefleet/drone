@@ -18,7 +18,7 @@ class CreateSopsTable extends Migration
             $table->string('title');
             $table->string('name')->nullable();
             $table->text('document')->nullable();
-            $table->longText('content');
+            $table->longText('content')->nullable();
             $table->timestamps();
         });
     }

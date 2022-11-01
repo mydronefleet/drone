@@ -16,17 +16,17 @@ class CreateRpicssTable extends Migration
         Schema::create('rpicss', function (Blueprint $table) {
             $table->id();
             $table->integer('org_id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('tail_number');
-            $table->date('date_of_ceretified');
-            $table->date('certificate_exp');
-            $table->string('mission_type');
-            $table->string('callsign');
-            $table->string('pic');
-            $table->string('certificate');
-            $table->string('short_desc');
-            $table->string('long_desc');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('tail_number')->nullable();
+            $table->date('date_of_ceretified')->nullable();
+            $table->date('certificate_exp')->nullable();
+            $table->string('mission_type')->nullable();
+            $table->string('callsign')->nullable();
+            $table->string('pic')->nullable();
+            $table->string('certificate')->nullable();
+            $table->string('short_desc')->nullable();
+            $table->string('long_desc')->nullable();
             $table->timestamps();
         });
     }
